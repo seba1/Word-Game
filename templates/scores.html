@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+<p>	{{ msg_for_usr }} </p>
+
+<H2> {{ pos_msg }} </H2>
+
+<h3>Top 10 Scores</h3>
+<ol>
+	{% for score_list in score_list %}
+		<li>{{ score_list }}
+	{% endfor %}
+</ol>
+
+<form action="{{ play_again_url }}" >
+    <input type="SUBMIT" value="Play Again?">
+	</p>
+</form>
+
+{% endblock %}

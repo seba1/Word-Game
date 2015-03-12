@@ -1,0 +1,17 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="/static/main.css">
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+	    <title>{{the_title}}</title>
+    </head>
+    <body>
+	<div data-role="page" data-theme="b" >
+		<div data-role="main" class="ui-content maindiv" >
+		<h1 class="thetitle">{{the_title}}</h1>
+        {% block the_body %}
+        {% endblock%}
+		</div>
+	</div>
+    </body>
+</html>

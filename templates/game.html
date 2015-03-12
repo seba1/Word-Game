@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+<p>
+Use word below to create 7 words from it, be quick!
+<BR><BR>
+Your 7 words have to be made of more than 2 letters and can't exceed length of source word.
+<BR><BR>
+Letters used to create 7 words have to be contained in source word, you can use each letter only once.
+</p>
+<form action="{{ submit_Ans_url }}" method="POST">
+
+	<h2><span class="srcwrd" >
+		Source Word: {{ source_word }}
+	</span></h2>
+
+	<h4>Start Time - {{ the_time }}! </h4>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				{{ message }}
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+    <p>
+	<B> Enter seven words </B>
+	<ol>
+		<li><input type="TEXT" name="word_Entered_0">
+		<li><input type="TEXT" name="word_Entered_1">
+		<li><input type="TEXT" name="word_Entered_2">
+		<li><input type="TEXT" name="word_Entered_3">
+		<li><input type="TEXT" name="word_Entered_4">
+		<li><input type="TEXT" name="word_Entered_5">
+		<li><input type="TEXT" name="word_Entered_6">
+	</ol>
+    </p>
+    <input type="SUBMIT" value="Submit Answers!">
+	</p>
+</form>
+
+
+{% endblock %}
