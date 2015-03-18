@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, url_for, request, redirect, flash, session
 from random import randint
 import datetime, collections
