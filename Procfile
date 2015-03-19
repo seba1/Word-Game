@@ -1,1 +1,1 @@
-web: gunicorn Word-Game:app
+web: gunicorn main:app
